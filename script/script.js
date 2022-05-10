@@ -16,14 +16,14 @@
         const subSub = $('.subSub');
 
       mainBtn.on({
-        mouseenter(e){
+        mouseenter(){
           const $this = $(this);
 
           sub.stop().fadeOut(0);
           $this.next().stop().fadeIn(300);
         },
 
-        focusin(e){
+        focusin(){
           const $this = $(this);
 
           sub.stop().fadeOut(0);
@@ -39,13 +39,13 @@
       });
 
       subBtn.on({
-        mouseenter(e){
+        mouseenter(){
           const $this = $(this);
 
           subSub.stop().fadeOut(0);
           $this.next().stop().fadeIn(300);
         },
-        focusin(e){
+        focusin(){
           const $this = $(this);
 
           subSub.stop().fadeOut(0);
