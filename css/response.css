@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @media all and (max-width:1280px){
     #wrap #main #section1 .wrap .slide-container {height:29.585%;}
     #wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide  a {width: 90%;padding: 0 1.544%;}
@@ -13,20 +14,27 @@
   #wrap #main #section4 .container .gap .content {max-width: 500px;height: 100%;padding:5%;display: flex;flex-wrap: row wrap;margin: 0 auto;}
 
 }
-@media all and (max-width:900px){
-  #wrap #header .container {max-width: 750px;}
 
-#wrap #header .container .left {padding: 0  0 0 0.788%;}
-#wrap #header .container .right {padding: 1.576% 0;}
+@media all and (max-width:863px){
+  #wrap #header .container .left #nav ul li {padding: 0 2.159%;}
+  #wrap #header .container .left #nav ul li a {font-size: 16px;}
 
 }
 @media all and (max-width:880px){
-#wrap #header .container .mobile-btn-box {display: block;margin: auto 15px auto auto;}
+/* #wrap #header .container .mobile-btn-box {display: block;margin: auto 15px auto auto;}
 #wrap #header .container .left #nav ul li a {display: none;}
 
-#wrap #main #section4 .container .gap .content {padding:10px;display: block;flex-wrap:row wrap;}
+#wrap #main #section4 .container .gap .content {padding:10px;display: block;flex-wrap:row wrap;} */
+}
+@media all and (max-width:790px){
+  #wrap #header .container .left #nav {display: none;}
+  #mobileNav {display: block;}
+  #wrap #header .container .right {padding: 4.797% 0;}
+
+
 
 }
+
 @media all and (max-width:640px){
   #wrap #footer {height: 400px;}
   #wrap #footer .wrap {height: calc(100vh - 300px);display: block;flex-flow: row wrap;}
@@ -39,10 +47,25 @@
 #wrap #header .container .left #nav ul li a.main-btn {display: block;padding: 20px 0 0 0;}
 
 }
+@media all and (max-width:600px){
+  #wrap #header .container .right {padding:  5% 0;}
+  
+}
+@media all and (max-width:545px){
+  #wrap #header .container .right {padding:  5.5% 0;}
+  #wrap #header .container .right .btn span {width: 25.174%;}
+
+ 
+}
 @media all and (max-width:530px){
+  #wrap #header .container .right {padding:  5.66% 0;}
+
 #wrap #main #section4 .container .gap .content {padding:20px;}
 
 
 }
+@media all and (max-width:440px){
+  #wrap #header .container .right {padding:  6.818% 5.3% 0 0 ;}
 
+}
 
