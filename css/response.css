@@ -28,7 +28,7 @@
 }
 @media all and (max-width:790px){
   #wrap #header .container .left #nav {display: none;}
-  #mobileNav {display: block;}
+  #wrap #header .container .left span .mobile-nav-btn {display: block;}
   #wrap #header .container .right {padding: 4.797% 0;}
 
 

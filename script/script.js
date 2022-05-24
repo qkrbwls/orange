@@ -52,6 +52,26 @@
           $this.next().stop().fadeIn(300);
         }
       });
+      
+      $('.mobile-nav-btn').on({
+        click:function(){
+          $('#mobileNav').show();
+        }
+      });
+        $('.mobile-close-btn').on({
+          click:function(){
+            $('#mobileNav').hide();
+          }
+        });
+        $('.mobile-container li a').on({ 
+          click:function(){
+            $(this).toggleClass('addMobile');
+            $(this).next('div').slideToggle(300);
+            $('.mobile-container li a.none-sub').removeClass('addMobile');
+          }
+        });
+       
+        
     },
 
     section1:function(){
