@@ -52,30 +52,40 @@
           $this.next().stop().fadeIn(300);
         }
       });
-      
+      $('.mobile-nav-btn').on({
+        click: function(){
+            $('#mobileNav').addClass('addMobile');
+            $('.mobile-container').stop().animate({left:0},700);
+        }
+      });
+      function mobileNavfn(){
+        $('.mobile-container').stop().animate({right:110+'%'},300, function(){
+          $('#mobileNav').removeClass('addMobile'); 
+      });
+    }
+      $('.mobile-close').on({
+        click:function(){
+          mobileNavfn();
+        }
+      });
+
       $('.mobile-nav-btn').on({
         click:function(){
           $('#mobileNav').show();
         }
       });
-        $('.mobile-close-btn').on({
-          click:function(){
-            $('#mobileNav').hide();
-          }
-        });
-        $('.mobile-container li a').on({ 
-          click:function(){
-            $(this).toggleClass('addMobile');
-            $(this).next('div').slideToggle(300);
-            $('.mobile-container li a.none-sub').removeClass('addMobile');
-          }
-        });
-       
-        
+
+      $('.mobile-container li a').on({ 
+        click:function(){
+          $(this).toggleClass('addMobile');
+          $(this).next('div').slideToggle(300);
+          $('.mobile-container li a.none-sub').removeClass('addMobile');
+        }
+      });
     },
 
     section1:function(){
-      var cnt = 0;
+      let cnt = 0;
       var setId = null;
       const slideWrap = $('.slide-wrap');
       let winW = $(window).innerWidth();
@@ -92,6 +102,7 @@
       function mainSlide(){
         slideWrap.stop().animate({left:-100*cnt + '%'}, 1000, 'easeInOutExpo',function(){
           if(cnt>4){cnt=0}
+          if(cnt<0){cnt=4}
         slideWrap.stop().animate({left:-100*cnt + '%'}, 0);
         });
       }

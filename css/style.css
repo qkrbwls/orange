@@ -60,11 +60,11 @@
 
 #wrap #main #section1 {width: 100%;height: 623px;}
 #wrap #main #section1.addColor {background: #2466DD;}
-#wrap #main #section1 .wrap {width: 100%;height: 623px;position: absolute;top: 0;left: 0;}
+#wrap #main #section1 .wrap {width: 100%;height: 623px;}
 #wrap #main #section1 .wrap .slide-container {position: relative;width: 100%;height: 563px;}
-#wrap #main #section1 .wrap .slide-container .slide-view {z-index: 1;position: relative;width: 100%;max-width: 1295px;overflow: hidden;height: 563px;margin: 5px auto 5px;}
-#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap {position: relative;width: 700%;margin-left: -100%;left:0;}
-#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide  {width:1295px;height: 563px;float: left;padding: 0 20px;}
+#wrap #main #section1 .wrap .slide-container .slide-view {position: relative;width: 100%;max-width: 1295px;overflow: hidden;height: 563px;margin: 5px auto 5px;}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap {position: relative;display: flex;width: 700%;margin-left: -100%;left:0;}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide  {width:1295px;height: 563px;padding: 0 20px;}
 #wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide0  {background: url(../img/mainimg_01.jpg) no-repeat 50% 50%;background-size: cover;}
 #wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide1  {background: url(../img/mainimg_02.jpg) no-repeat 50% 50%;background-size: cover;}
 #wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide2  {background: url(../img/mainimg_03.jpg) no-repeat 50% 50%;background-size: cover;}
@@ -169,37 +169,39 @@
 
 /* 모바일 */
 #mobileNav {display: none;z-index: 4;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background:rgba(0,0,0, .7);transition:all .3s;padding:0 20% 0 0;}
+#mobileNav.addMobile {display:block;background:rgba(0,0,0, .7);}
 #mobileNav .mobile-container {width: 100%;height: 100%;background:#2466DD;position: relative;}
 
-#mobileNav .mobile-container span {padding: 10px;}
-#mobileNav .mobile-container span .mobile-close-btn {position: absolute;top: 30px;right: -40px;width: 30px;height: 30px;}
-#mobileNav .mobile-container span .mobile-close-btn img {width: 30px;height: 30px;}
+#mobileNav .mobile-container .mobile-close {padding: 10px;position: absolute;top: 30px;right: -40px;width: 30px;height: 30px;}
+#mobileNav.addMobile .mobile-container .mobile-close img {width: 30px;height: 30px;}
 
 
 #mobileNav .mobile-container ul {width: 100%;height: 100%;}
 #mobileNav .mobile-container ul li {padding: 30px 25px;}
 #mobileNav .mobile-container ul li a {display: block;position: relative;z-index: 2;font-weight: 650;line-height: 150%;font-size: 25px;color: #fff;width: 100%;background: transparent url(../img/mobile_down.png);}
 #mobileNav .mobile-container ul li a::before {position: absolute;z-index: 1;content: '';display: block;left: 400px;top: 0px;width:50px;height: 100%;background: url(../img/mobile_down.png) no-repeat 50% 50%;background-size: cover;opacity: .8;}
+#mobileNav .mobile-container ul li .none-sub::before {background-image: none;}
 #mobileNav .mobile-container ul li a.addMobile::before {background-image: url(../img/mobile_up.png);}
 
 #mobileNav .mobile-container .m-sub {display:none;width: 100%;height: 100%;}
 #mobileNav .mobile-container .m-sub .m-sub-in {width: 100%;height: 100%;}
 #mobileNav .mobile-container .m-sub .m-sub-in > ul {width: 100%;}
-#mobileNav .mobile-container .m-sub .m-sub-in > ul > li {width: 100%;border-bottom:1.5px solid #000;}
-#mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a {position: relative;z-index: 2;display: block;text-align: left;font-size: 23px;line-height: 150%;height: 100%;padding:0 0 0 20px;}
-#mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a::before {position: absolute;z-index: 1;content: '';display: block;left: 400px;top: 0px;width:50px;height: 100%;background: url(../img/mobile_down.png) no-repeat 50% 50%;background-size: cover;opacity: .8;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li {width: 100%;border-bottom:2px solid #000;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a {position: relative;z-index: 2;display: block;text-align: left;font-size: 23px;line-height: 150%;height: 100%;padding:0 0 0 20px;color: #fa9719;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a::before {position: absolute;z-index: 1;content: '';display: block;left: 380px;top: 0px;width:50px;height: 100%;background: url(../img/mobile_down.png) no-repeat 50% 50%;background-size: cover;opacity: .8;}
 #mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a.none-sub::before {background-image: none;}
 #mobileNav .mobile-container .m-sub .m-sub-in > ul > li > a.addMobile::before {background-image: url(../img/mobile_up.png);}
 #mobileNav .mobile-container .m-sub.sub1 {display: none;}
 #mobileNav .mobile-container .m-sub.sub2 {display: none;}
 
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub {display: block;width:100%;background:transparent;}
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub ul {width: 100%;height: 100%;}
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub ul li {border-bottom: 1.5px solid #fff;}
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub ul li a {text-align: left;font-size: 23px;line-height: 150%;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub {display: block;width:100%;background:transparent;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub > ul {width: 100%;height: 100%;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub > ul > li {border-bottom: 1.5px solid #fff;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub > ul > li > a {text-align: left;font-size: 23px;line-height: 150%;padding:0 0 0 20px;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub > ul > li > a::before {background-image: none;}
 /* 서브서브  */
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub.s1 {display: block;}
-#mobileNav .mobile-container ul li .m-sub .m-sub-in > ul > li .subSub.s2 {display: block;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub.s1 {display: none;}
+#mobileNav .mobile-container .m-sub .m-sub-in > ul > li .m-subSub.s2 {display: none;}
 
 
 
