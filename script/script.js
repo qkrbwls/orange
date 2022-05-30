@@ -94,10 +94,10 @@
       });
 
       function mainSlide(){
-        slideWrap.stop().animate({left:-winW*cnt}, 700, 'easeInOutExpo',function(){
+        slideWrap.stop().animate({left:-100*cnt + '%'}, 1000, 'easeInOutExpo',function(){
           if(cnt>4){cnt=0}
           if(cnt<0){cnt=4}
-        slideWrap.stop().animate({left:-winW*cnt}, 0);
+        slideWrap.stop().animate({left:-100*cnt + '%'}, 0);
         });
       }
 
